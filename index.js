@@ -5,7 +5,6 @@ const app = express();
 const mongoose = require('mongoose');
 const port = 5000;
 let authModel = require('./authSchema');
-// const { response } = require('express');
 
 
 app.use(cors());
@@ -52,12 +51,3 @@ app.listen(port, () => {
     console.log('Server is Running!')
 })
 
-
-
-
-// "contact": 8121234566,
-    // "education": ["Hafiz", "School", "College"],
-    // "post": {
-    //     "postName": "post1",
-    //     "postData": "20-August"
-    // }
