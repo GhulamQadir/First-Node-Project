@@ -9,6 +9,7 @@ const ey = require('./')
 const dotenv = require("dotenv");
 dotenv.config({ path: "./key.env" });
 
+
 app.use(cors());
 app.use(bd.urlencoded({
     extended:false
@@ -50,6 +51,6 @@ app.post('/signUp', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log('Server is Running!',)
+    console.log('Server is Running!')
 })
 
