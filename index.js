@@ -5,7 +5,9 @@ const app = express();
 const mongoose = require('mongoose');
 const port = 5000;
 let authModel = require('./authSchema');
-
+const ey = require('./')
+const dotenv = require("dotenv");
+dotenv.config({ path: "./key.env" });
 
 app.use(cors());
 app.use(bd.urlencoded({
@@ -14,7 +16,7 @@ app.use(bd.urlencoded({
 
 app.use(bd.json());
 
-mongoose.connect('mongodb+srv://GhulamQadir:admin2356@cluster0.qt2bg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
+mongoose.connect(process.env.url, {
     useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -48,6 +50,6 @@ app.post('/signUp', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log('Server is Running!')
+    console.log('Server is Running!',)
 })
 
