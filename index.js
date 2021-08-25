@@ -7,7 +7,7 @@ const port = 5000;
 let authModel = require('./authSchema');
 const ey = require('./')
 const dotenv = require("dotenv");
-dotenv.config({ path: "./key.env" });
+dotenv.config({ path: "./nodeman.env" });
 
 
 app.use(cors());
